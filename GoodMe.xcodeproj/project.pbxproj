@@ -16,6 +16,8 @@
 		AD781BE1243F3F2B0081BF8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD781BDF243F3F2B0081BF8D /* LaunchScreen.storyboard */; };
 		AD781BEC243F3F2B0081BF8D /* GoodMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD781BEB243F3F2B0081BF8D /* GoodMeTests.swift */; };
 		AD781BF7243F3F2B0081BF8D /* GoodMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD781BF6243F3F2B0081BF8D /* GoodMeUITests.swift */; };
+		AD781C06243F49EE0081BF8D /* DevelopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD781C05243F49EE0081BF8D /* DevelopView.swift */; };
+		AD781C0A243F4B300081BF8D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD781C09243F4B300081BF8D /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		AD781BF2243F3F2B0081BF8D /* GoodMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD781BF6243F3F2B0081BF8D /* GoodMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodMeUITests.swift; sourceTree = "<group>"; };
 		AD781BF8243F3F2B0081BF8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD781C05243F49EE0081BF8D /* DevelopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopView.swift; sourceTree = "<group>"; };
+		AD781C07243F4B290081BF8D /* GoodMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodMe.entitlements; sourceTree = "<group>"; };
+		AD781C09243F4B300081BF8D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD781C0A243F4B300081BF8D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				AD781BEA243F3F2B0081BF8D /* GoodMeTests */,
 				AD781BF5243F3F2B0081BF8D /* GoodMeUITests */,
 				AD781BCF243F3F270081BF8D /* Products */,
+				AD781C08243F4B300081BF8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +108,11 @@
 		AD781BD0243F3F270081BF8D /* GoodMe */ = {
 			isa = PBXGroup;
 			children = (
+				AD781C07243F4B290081BF8D /* GoodMe.entitlements */,
 				AD781BD1243F3F270081BF8D /* AppDelegate.swift */,
 				AD781BD3243F3F270081BF8D /* SceneDelegate.swift */,
 				AD781BD8243F3F270081BF8D /* ContentView.swift */,
+				AD781C05243F49EE0081BF8D /* DevelopView.swift */,
 				AD781BDA243F3F2B0081BF8D /* Assets.xcassets */,
 				AD781BDF243F3F2B0081BF8D /* LaunchScreen.storyboard */,
 				AD781BE2243F3F2B0081BF8D /* Info.plist */,
@@ -137,6 +146,14 @@
 				AD781BF8243F3F2B0081BF8D /* Info.plist */,
 			);
 			path = GoodMeUITests;
+			sourceTree = "<group>";
+		};
+		AD781C08243F4B300081BF8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD781C09243F4B300081BF8D /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD781C06243F49EE0081BF8D /* DevelopView.swift in Sources */,
 				AD781BD2243F3F270081BF8D /* AppDelegate.swift in Sources */,
 				AD781BD7243F3F270081BF8D /* GoodMe.xcdatamodeld in Sources */,
 				AD781BD9243F3F270081BF8D /* ContentView.swift in Sources */,
@@ -459,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GoodMe/GoodMe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GoodMe/Preview Content\"";
 				DEVELOPMENT_TEAM = 66PKF55HK5;
@@ -479,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GoodMe/GoodMe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GoodMe/Preview Content\"";
 				DEVELOPMENT_TEAM = 66PKF55HK5;
