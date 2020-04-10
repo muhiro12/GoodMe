@@ -10,7 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        DevelopView()
+        TabView {
+            TaskView()
+                .tabItem {
+                    Image(systemName: "house")
+            }
+            CalendarView()
+                .tabItem {
+                    Image(systemName: "calendar")
+            }
+        }
     }
 }
 
